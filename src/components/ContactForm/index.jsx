@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const INITIAL_STATE = {
   contactName: '',
