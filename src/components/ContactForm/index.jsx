@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import css from './contactForm.module.css';
 
 const INITIAL_STATE = {
   contactName: '',
@@ -23,21 +24,23 @@ class ContactForm extends Component {
   };
   render() {
     return (
-      <div>
-        <h1>Phonebook</h1>
-        <form onSubmit={this.hadleSubmit}>
-          <label>
+      <div className={css.wrapper}>
+        <h1 className={css.title}>Phonebook</h1>
+        <form className={css.contactForm} onSubmit={this.hadleSubmit}>
+          <label className={css.contactFormLabel}>
             Name
             <input
+              className={css.contactFormInput}
               type="text"
               name="contactName"
               value={this.state.contactName}
               onChange={this.handleChange}
             />
           </label>
-          <label>
+          <label className={css.contactFormLabel}>
             Number
             <input
+              className={css.contactFormInput}
               type="tel"
               name="contactNumber"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -47,7 +50,9 @@ class ContactForm extends Component {
               onChange={this.handleChange}
             />
           </label>
-          <button type="submit">Add contact</button>
+          <button className={css.contactFormBtn} type="submit">
+            Add contact
+          </button>
         </form>
       </div>
     );

@@ -1,0 +1,41 @@
+.wrapper {
+  padding: 30px;
+}
+
+.title {
+  color: rgb(139, 49, 103);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactFormLabel {
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.contactFormInput:hover {
+  cursor: pointer;
+  box-shadow: 5px 2px 5px rgb(171, 203, 107);
+  transform: scale(1.2);
+}
+.contactFormInput {
+  margin-left: 30px;
+}
+
+.contactFormBtn {
+  max-width: 150px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: yellowgreen;
+  border: none;
+  border-radius: 50%;
+}
+
+.contactFormBtn:hover {
+  cursor: pointer;
+  box-shadow: 5px 2px 5px rgb(171, 203, 107);
+  transform: scale(1.2);
+}

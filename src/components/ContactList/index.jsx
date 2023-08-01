@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import css from './contactList.module.css';
 
 class ContactList extends Component {
   state = {
@@ -26,10 +27,11 @@ class ContactList extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Contacts</h2>
+      <div className={css.wrapper}>
+        <h2 className={css.titel}>Contacts</h2>
         <ul>
           <input
+            className={css.findContact}
             type="text"
             name="filter"
             placeholder="find contact"
@@ -38,9 +40,12 @@ class ContactList extends Component {
           ></input>
           {this.filteredContacts().map(
             ({ contactName, contactNumber }, index) => (
-              <li key={index}>
+              <li className={css.newContact} key={index}>
                 {contactName}:{contactNumber}
-                <button onClick={() => this.props.deleteContact(index)}>
+                <button
+                  className={css.deleteBtn}
+                  onClick={() => this.props.deleteContact(index)}
+                >
                   usuń
                 </button>
               </li>
